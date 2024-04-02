@@ -3,6 +3,11 @@
 This is my work in progress CV webpage. I chose Astro because I think this should be a) the ideal use case for it, and b) I want to.
 If you happen to read this Readme. This might be work in progress
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b71d2ba-25f4-4dbc-bfff-68389c239307/deploy-status)](https://app.netlify.com/sites/holgergp-cv/deploys)
+
+I left the docs below in this repo for my own convenience:
+
+
 ## 👨🏻‍💻 Running Locally
 
 The easiest way to run this project locally is to run the following command in your desired directory.
