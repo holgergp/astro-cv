@@ -2,13 +2,14 @@
 import { SITE } from "@config";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
+import Header, {type CVPage} from "@components/Header.astro";
 import Layout from "./Layout.astro";
 
 export interface Props {
   frontmatter: {
     title: string;
     description?: string;
+    activeNav: CVPage;
   };
 }
 
@@ -16,7 +17,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
-  <Header activeNav="about" />
+  <Header activeNav={frontmatter.activeNav} />
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">

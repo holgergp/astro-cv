@@ -2,16 +2,9 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 
+export type CVPage =  "frontpage" | "career"| "buzzwords"| "publications"| "workshops"| "certifications"| "hobbies"| "projects";
 export interface Props {
-  activeNav?:
-    | "frontpage"
-    | "career"
-    | "buzzwords"
-    | "publications"
-    | "workshops"
-    | "certifications"
-    | "hobbies"
-    | "projects";
+  activeNav?:CVPage
 }
 
 const { activeNav } = Astro.props;
