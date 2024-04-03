@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import Contact from "@components/Contact.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Socials from "@components/Socials.astro";
@@ -14,9 +15,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Hi! I am Holger!</h1>
-
+      <Contact />
       <p>
+        <p>Hi! I am Holger!</p>
         <p>
           I love to develop great software. Frontend and cloud environments are
           my sweetspot most of the time!

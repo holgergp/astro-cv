@@ -7,6 +7,11 @@ If you happen to read this Readme. This might be work in progress
 
 I left the docs below in this repo for my own convenience:
 
+## TODO
+
+- [ ] Fill out all the CV pages
+- [ ] Load data from astro DB
+- [ ] Make CV printable 
 
 ## 👨🏻‍💻 Running Locally
 
