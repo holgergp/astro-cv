@@ -39,4 +39,18 @@ const frontpage = defineCollection({
     }),
 });
 
-export const collections = { blog, frontpage };
+const careerItemSchema = z.object({
+  from: z.string().datetime(),
+  to: z.string().datetime(),
+  company: z.string(),
+  role: z.string(),
+  description: z.string(),
+  link: z.string().url().optional(),
+  logoUrl: z.string().optional(),
+});
+const career = defineCollection({
+  type: "data",
+  schema: () => z.array(careerItemSchema),
+});
+
+export const collections = { blog, frontpage, career };

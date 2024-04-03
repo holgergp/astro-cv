@@ -1,0 +1,13 @@
+---
+export interface Props {
+  dateTime: string;
+}
+
+const { dateTime } = Astro.props;
+const asDate = new Date(dateTime);
+const year = asDate.getFullYear();
+---
+
+<div>{year}</div>
+
+<style></style>
