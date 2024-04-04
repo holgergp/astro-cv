@@ -2,7 +2,7 @@
 import Year from "./Year.astro";
 export interface Props {
   dateTimeFrom: string;
-  dateTimeTo: string;
+  dateTimeTo?: string;
 }
 
 const { dateTimeFrom, dateTimeTo } = Astro.props;
@@ -11,6 +11,6 @@ const { dateTimeFrom, dateTimeTo } = Astro.props;
 <div class="flex">
   <Year dateTime={dateTimeFrom} />
   -
-  <Year dateTime={dateTimeTo} />
+  {dateTimeTo ? <Year dateTime={dateTimeTo} /> : <div>today</div>}
 </div>
 <style></style>

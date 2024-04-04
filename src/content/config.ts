@@ -41,7 +41,7 @@ const frontpage = defineCollection({
 
 const careerItemSchema = z.object({
   from: z.string().datetime(),
-  to: z.string().datetime(),
+  to: z.string().datetime().optional(),
   company: z.string(),
   role: z.string(),
   description: z.string(),

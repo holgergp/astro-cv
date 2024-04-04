@@ -6,5 +6,59 @@
     "role": "Senior Product Engineer | Lead Frontend Engineer",
     "description": "Developing an observability solution with a focus on open-telemtery",
     "link": "https://dash0.com"
+  },
+  {
+    "from": "2015-10-01T00:00:00Z",
+    "to": "2023-06-31T00:00:00Z",
+    "company": "codecentric AG",
+    "role": "Senior Developer | Senior IT Consultant",
+    "description": "Developing software for clients from the fields of e-commerce, insurances, retail or the public sector",
+    "link": "https://codecentric.de"
+  },
+  {
+    "from": "2020-01-01T00:00:00Z",
+    "to": "2023-06-31T00:00:00Z",
+    "company": "codecentric AG",
+    "role": "Organizing and leading a JavaScript community",
+    "description": "I organized and led an JavaScript community within codecentric; with meetups, conferences and various events",
+    "link": "https://codecentric.de"
+  },
+  {
+    "from": "2020-01-01T00:00:00Z",
+    "company": "Papperlapapp - Spaß mit Klammern (Youtube Channel)",
+    "role": "Content Creation",
+    "description": "To this day, we do a small Youtube channel in german language, dedicated to all shapes and colours of frontend development.",
+    "link": "https://papperlapapp.dev"
+  },
+  {
+    "from": "2016-10-01T00:00:00Z",
+    "company": "@autoweird.fm",
+    "role": "Podcaster",
+    "description": "To this day, we are makign podcast episodes dealing with our journey in software development: Software crafting, agility, softskills, and everything and nothing.",
+    "link": "https://autoweird.fm"
+  },
+  {
+    "from": "2006-06-01T00:00:00Z",
+    "to": "2015-09-31T00:00:00Z",
+    "company": "iks GmbH",
+    "role": "IT Consultant | Head of competence center for software engineering",
+    "description": "Developing software for clients from the fields of finance, insurances, logistics ...",
+    "link": "https://iks-gmbh.com"
+  },
+  {
+    "from": "2002-01-01T00:00:00Z",
+    "to": "2006-01-01T00:00:00Z",
+    "company": "Chair of Processcontrol-Engineering (ACPLT)",
+    "role": "Software Developer",
+    "description": "Student assistant developing browser based tools for process control engineering",
+    "link": "https://www.iat.rwth-aachen.de/go/id/eety/"
+  },
+  {
+    "from": "1998-10-01T00:00:00Z",
+    "to": "2006-01-01T00:00:00Z",
+    "company": "RWTH Aachen",
+    "role": "Student",
+    "description": "Studying computer science",
+    "link": "https://www.rwth-aachen.de"
   }
 ]

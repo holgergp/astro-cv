@@ -16,6 +16,7 @@ module.exports = {
     screens: {
       sm: "640px",
     },
+    darkMode: 'selector',
 
     extend: {
       textColor: {
