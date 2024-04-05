@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2022-01-01T00:00:00.000Z",
+    "source": "AWS",
+    "title": "AWS Certified Developer Associate"
+  },
+  {
+    "date": "2021-01-01T00:00:00.000Z",
+    "source": "MHFA Ersthelfer",
+    "title": "Mental Health First Aider"
+  },
+  {
+    "title": "Kotlin for Java Developers",
+    "source": "Svetlana Isakova, Andrey Breslav; Coursera",
+    "date": "2017-01-01T00:00:00.000Z"
+  }
+]

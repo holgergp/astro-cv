@@ -2,9 +2,14 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 
-export type CVPage =    "career"| "buzzwords"| "publications"| "workshops"| "certifications"| "hobbies"| "projects";
+export type CVPage =
+  | "career"
+  | "buzzwords"
+  | "publications"
+  | "hobbies"
+  | "projects";
 export interface Props {
-  activeNav?:CVPage
+  activeNav?: CVPage;
 }
 
 const { activeNav } = Astro.props;
@@ -55,7 +60,6 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-      
           <li>
             <a href="/career/" class={activeNav === "career" ? "active" : ""}>
               Career
@@ -79,10 +83,10 @@ const { activeNav } = Astro.props;
           </li>
           <li>
             <a
-              href="/workshops/"
-              class={activeNav === "workshops" ? "active" : ""}
+              href="/certifications/"
+              class={activeNav === "certifications" ? "active" : ""}
             >
-              Workshops
+              Certifications
             </a>
           </li>
           <li>

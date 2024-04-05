@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import YearOrOngoing from "../components/YearOrOngoing.astro";
+
+const certificationCollection = await getCollection("certifications");
+
+const certifications = certificationCollection.flatMap(c => c.data);
+---
+
+<PageLayout
+  frontmatter={{ title: "Certifications", activeNav: "certifications" }}
+>
+  <ul class="">
+    {
+      certifications.map(p => (
+        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+          <div class="mt-0 flex font-semibold ">
+            <YearOrOngoing dateTime={p.date} />
+          </div>
+          <div class="mb-0 flex flex-wrap gap-x-1">
+            <span class="font-semibold">{p.title}</span>
+            <span class="italic">{p.source ? `${p.source}` : ""}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style></style>
+</PageLayout>
