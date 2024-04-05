@@ -69,6 +69,7 @@ const publicationSchema = z.object({
   coauthor: z.string().optional(),
   title: z.string(),
   link: z.string().url().optional(),
+  featured: z.boolean().optional(),
 });
 const publications = defineCollection({
   type: "data",

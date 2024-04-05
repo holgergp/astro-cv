@@ -3,24 +3,23 @@
     "source": "Papperlapapp - Spaß mit Klammern (Fun with brackets)",
     "coauthor": "Stefan Spittank",
     "link": "https://papperlapapp.dev",
-    "title": "Over 40 episodes of the frontend focussed youtube channel"
+    "title": "Over 40 episodes of the frontend focussed youtube channel",
+    "featured": true
   },
   {
     "source": "@autoweird.fm",
     "coauthor": "Benedikt Ritter",
     "link": "https://autoweird.fm",
-    "title": "Over 100 episodes of the developer focussed podcast"
-  },
-  {
-    "title": "Github",
-    "link": "https://github.com/holgergp"
+    "title": "Over 100 episodes of the developer focussed podcast",
+    "featured": true
   },
   {
     "date": "2023-01-10T00:00:00Z",
     "source": "EnterJS 2023, Darmstadt",
     "coauthor": "Stefan Spittank",
     "title": "Nein! Doch! Oh!! – Diese 5 Dinge machen Webentwicklung 2023 besser!",
-    "link": "https://www.youtube.com/watch?v=9xkiIrQhg8s"
+    "link": "https://www.youtube.com/watch?v=9xkiIrQhg8s",
+    "featured": true
   },
   {
     "date": "2022-01-01T00:00:00Z",
@@ -45,5 +44,89 @@
     "source": "EnterJS 2018, Darmstadt",
     "title": "Jest: Frontend Testing richtig gemacht",
     "link": "https://enterjs.de/2018/singleb824.html?id=6712&jest%3A-frontend-testing-richtig-gemacht"
+  },
+  {
+    "date": "2018-01-01T00:00:00Z",
+    "source": "Webworker NRW, Düsseldorf",
+    "title": "Jest: Frontend Testing richtig gemacht",
+    "link": "https://www.slideshare.net/holgergp/jest-frontend-testing-richtig-gemacht-webworkernrw-93636211"
+  },
+  {
+    "date": "2017-01-01T00:00:00Z",
+    "source": "codecentric AG, Solingen",
+    "title": "React/Redux Workshop"
+  },
+  {
+    "date": "2017-01-01T00:00:00Z",
+    "source": "codecentric Blog",
+    "title": "JavaScript Unit Tests sind schwer aufzusetzen? Keep\ncalm and use Jest!",
+    "link": "https://blog.codecentric.de/javascript-unit-tests-sind-schwer-aufzusetzen-keep-calm-use-jest"
+  },
+  {
+    "date": "2016-01-01T00:00:00Z",
+    "source": "codecentric Blog",
+    "title": "React.js im Praxis-Check",
+    "link": "https://blog.codecentric.de/react-js-im-praxischeck"
+  },
+  {
+    "date": "2015-01-01T00:00:00Z",
+    "source": "iks GmbH Blog",
+    "title": "JavaScript MVC Frameworks: Vergleich",
+    "link": "https://www.iks-gmbh.com/news/details/javascript-mvc-frameworks-teil-1"
+  },
+  {
+    "date": "2015-01-01T00:00:00Z",
+    "source": "iks GmbH Blog",
+    "title": "JavaScript MVC Frameworks: Angular.js",
+    "link": "https://www.iks-gmbh.com/news/details/javascript-mvc-frameworks-teil-2"
+  },
+  {
+    "date": "2015-01-01T00:00:00Z",
+    "source": "iks GmbH Blog",
+    "title": "JavaScript MVC Frameworks: Ember.js",
+    "link": "https://www.iks-gmbh.com/news/details/javascript-mvc-frameworks-teil-3"
+  },
+  {
+    "date": "2015-01-01T00:00:00Z",
+    "source": "iks GmbH Blog",
+    "title": "JavaScript MVC Frameworks: Knockout.js",
+    "link": "https://www.iks-gmbh.com/news/details/javascript-mvc-frameworks-teil-4"
+  },
+  {
+    "date": "2014-01-01T00:00:00Z",
+    "source": "berufsstart.de",
+    "title": "Erfahrungsbericht: Informatikstudium und Jobeinstieg",
+    "link": "https://www.berufsstart.de/unternehmen/iks/erfahrungsbericht-informatik.php"
+  },
+  {
+    "date": "2011-01-01T00:00:00Z",
+    "coauthor": "Jörg Meister",
+    "title": "Reiche Formulare - Das passende Rich-Client-Framework für Ihr Projekt",
+    "source": "Java Magazin 08.2011"
+  },
+  {
+    "date": "2011-01-01T00:00:00Z",
+    "title": "Tickling the shoulders of giants: An internal client for financial services based on Eclipse RCP",
+    "source": "EclipseCon Europe 2011, Ludwigsburg",
+    "link": "https://www.slideshare.net/iksgmbh/iks-auf-der-elipsecon-2011-tickling-the-shoulders-of-giants"
+  },
+  {
+    "date": "2010-01-01T00:00:00Z",
+    "title": "RCP-Hilfesystem und Enterprise-Wikis",
+    "coauthor": "Jörg Meister",
+    "source": "Eclipse Magazin 06.2010",
+    "link": "https://www.iks-gmbh.com/fachartikel?file=files/content/Downloads/IKS-RCP-Hilfesystem-Eclipse-Magazin.pdf&cid=700"
+  },
+  {
+    "date": "2004-01-01T00:00:00Z",
+    "title": "An Infrastructure for Browser-located Applications in Industrial Automation",
+    "coauthor": "Dr. H. Albrecht",
+    "source": "Proceedings of the Workshop for Factory Communication\nSystems 2004"
+  },
+  {
+    "date": "2004-01-01T00:00:00Z",
+    "title": "An Infrastructure for Browser-located Applications in Industrial Automation",
+    "coauthor": "Dr. H. Albrecht",
+    "source": "Workshop for Factory Communication Systems 2004, Wien"
   }
 ]

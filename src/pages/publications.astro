@@ -13,7 +13,7 @@ const publications = publicationCollection.flatMap(c => c.data);
     {
       publications.map(p => (
         <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
-          <div class="font-semibold mt-0">
+          <div class="flex font-semibold mt-0 ">
             <YearOrOngoing dateTime={p.date} />
           </div>
           <div class="flex flex-wrap gap-x-1 mb-0">
@@ -21,7 +21,7 @@ const publications = publicationCollection.flatMap(c => c.data);
               {p.coauthor ? `With ${p.coauthor}:` : ""}
             </span>
             <span class="font-semibold">
-              <a class="prose" href={p.link}>
+              <a target="_blank" class="prose" href={p.link}>
                 {p.title}
               </a>
             </span>
