@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Methods",
+    "buzzwords": [
+      "Clean Code",
+      "TDD",
+      "Software architecture",
+      "Scrum",
+      "Kanban",
+      "Agile"
+    ]
+  },
+  {
+    "name": "Languages",
+    "buzzwords": [
+      "JavaScript",
+      "TypeScript",
+      "Kotlin",
+      "Java",
+      "Go",
+      "Flow",
+      "Python",
+      "Elixir",
+      "Scala"
+    ]
+  },
+  {
+    "name": "Frontend",
+    "buzzwords": [
+      "React.js",
+      "Next.js",
+      "d3.js",
+      "visx",
+      "react-flow",
+      "use-swr",
+      "react-query",
+      "Redux",
+      "Redux-Saga",
+      "Zustand",
+      "Solid.js",
+      "Recoil",
+      "Jotai"
+    ]
+  },
+  {
+    "name": "Backend",
+    "buzzwords": [
+      "node.js",
+      "npm",
+      "pnpm",
+      "Open API",
+      "PromQL",
+      "Spring Boot",
+      "Maven",
+      "Gradle",
+      "Docker",
+      "Kubernetes",
+      "Tomcat",
+      "Gin",
+      "express.js",
+      "Thymeleaf",
+      "Mongo DB",
+      "Clickhouse",
+      "Oracle DB",
+      "Postgres",
+      "MySQL",
+      "Phoenix"
+    ]
+  },
+  {
+    "name": "Testing",
+    "buzzwords": [
+      "Jest",
+      "react-testing-library",
+      "Storybook",
+      "Chromatic",
+      "cucumber.js",
+      "Cypress.js",
+      "Jasmine",
+      "JUnit",
+      "Pact",
+      "TestCafé",
+      "TestContainers",
+      "Mockito",
+      "Mockk",
+      "Karma",
+      "Selenium"
+    ]
+  },
+  {
+    "name": "Cloud",
+    "buzzwords": [
+      "Vercel",
+      "AWS",
+      "AWS CDK",
+      "Amazon S3",
+      "AWS Lambda",
+      "AWS Fargate",
+      "AWS Kinesis",
+      "AWS Personalize",
+      "Azure",
+      "Azure Cosmos DB",
+      "Heroku",
+      "netlify",
+      "Akamai"
+    ]
+  },
+  {
+    "name": "Developer Workflow",
+    "buzzwords": [
+      "Git",
+      "Gitlab CI",
+      "Github Actions",
+      "Travis CI",
+      "TeamCity",
+      "Jenkins",
+      "IntelliJ",
+      "VSCode"
+    ]
+  },
+  {
+    "name": "Interest",
+    "buzzwords": [
+      "Software Crafting",
+      "TDD",
+      "Web Technology",
+      "Functional Programming"
+    ]
+  }
+]

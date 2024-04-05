@@ -53,4 +53,14 @@ const career = defineCollection({
   schema: () => z.array(careerItemSchema),
 });
 
-export const collections = { blog, frontpage, career };
+const buzzwordsSchema = z.object({
+  name: z.string(),
+  buzzwords: z.array(z.string()),
+});
+
+const buzzwords = defineCollection({
+  type: "data",
+  schema: () => z.array(buzzwordsSchema),
+});
+
+export const collections = { blog, frontpage, career, buzzwords };
