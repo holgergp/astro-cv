@@ -1,0 +1,49 @@
+[
+  {
+    "source": "Papperlapapp - Spaß mit Klammern (Fun with brackets)",
+    "coauthor": "Stefan Spittank",
+    "link": "https://papperlapapp.dev",
+    "title": "Over 40 episodes of the frontend focussed youtube channel"
+  },
+  {
+    "source": "@autoweird.fm",
+    "coauthor": "Benedikt Ritter",
+    "link": "https://autoweird.fm",
+    "title": "Over 100 episodes of the developer focussed podcast"
+  },
+  {
+    "title": "Github",
+    "link": "https://github.com/holgergp"
+  },
+  {
+    "date": "2023-01-10T00:00:00Z",
+    "source": "EnterJS 2023, Darmstadt",
+    "coauthor": "Stefan Spittank",
+    "title": "Nein! Doch! Oh!! – Diese 5 Dinge machen Webentwicklung 2023 besser!",
+    "link": "https://www.youtube.com/watch?v=9xkiIrQhg8s"
+  },
+  {
+    "date": "2022-01-01T00:00:00Z",
+    "source": "codecentric Blog",
+    "title": "TypeScript 4.5 und der awaited type",
+    "link": "https://blog.codecentric.de/typescript-4-5-und-der-awaited-type"
+  },
+  {
+    "date": "2019-01-01T00:00:00Z",
+    "source": "codecentric Blog",
+    "title": "BDD und End-to-End-Tests – cypress.io mit Cucumber verbinden",
+    "link": "https://blog.codecentric.de/bdd-und-end-to-end-tests-cypress-io-mit-cucumber-verbinden"
+  },
+  {
+    "date": "2018-01-01T00:00:00Z",
+    "source": "Developer Week 2018, Nürnberg",
+    "title": "Das Frontend richtig testen – mit Jest",
+    "link": "https://www.slideshare.net/holgergp/das-frontend-richtig-testen-mit-jest-developer-week-2018"
+  },
+  {
+    "date": "2018-01-01T00:00:00Z",
+    "source": "EnterJS 2018, Darmstadt",
+    "title": "Jest: Frontend Testing richtig gemacht",
+    "link": "https://enterjs.de/2018/singleb824.html?id=6712&jest%3A-frontend-testing-richtig-gemacht"
+  }
+]

@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import YearOrOngoing from "../components/YearOrOngoing.astro";
+
+const publicationCollection = await getCollection("publications");
+
+const publications = publicationCollection.flatMap(c => c.data);
+---
+
+<PageLayout frontmatter={{ title: "Publications", activeNav: "publications" }}>
+  <ul class="">
+    {
+      publications.map(p => (
+        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+          <div class="font-semibold mt-0">
+            <YearOrOngoing dateTime={p.date} />
+          </div>
+          <div class="flex flex-wrap gap-x-1 mb-0">
+            <span class="font-medium">
+              {p.coauthor ? `With ${p.coauthor}:` : ""}
+            </span>
+            <span class="font-semibold">
+              <a class="prose" href={p.link}>
+                {p.title}
+              </a>
+            </span>
+            <span class="italic">{p.source ? `${p.source}` : ""}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style></style>
+</PageLayout>

@@ -1,0 +1,13 @@
+---
+import Year from "./Year.astro";
+export interface Props {
+  dateTime?: string;
+}
+
+const { dateTime } = Astro.props;
+---
+
+<div class="flex">
+  {dateTime ? <Year dateTime={dateTime} /> : <div>Ongoing</div>}
+</div>
+<style></style>
