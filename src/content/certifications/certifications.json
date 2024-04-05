@@ -1,17 +1,37 @@
 [
   {
-    "date": "2022-01-01T00:00:00.000Z",
+    "date": "2022-01-01T00:00:00Z",
     "source": "AWS",
     "title": "AWS Certified Developer Associate"
   },
   {
-    "date": "2021-01-01T00:00:00.000Z",
+    "date": "2021-01-01T00:00:00Z",
     "source": "MHFA Ersthelfer",
     "title": "Mental Health First Aider"
   },
   {
     "title": "Kotlin for Java Developers",
     "source": "Svetlana Isakova, Andrey Breslav; Coursera",
-    "date": "2017-01-01T00:00:00.000Z"
+    "date": "2017-01-01T00:00:00Z"
+  },
+  {
+    "title": "Systemisches Kommunizieren und Handeln",
+    "date": "2016-01-01T00:00:00Z",
+    "source": "Uwe Henke"
+  },
+  {
+    "title": "Principles of Reactive Programming",
+    "source": "Martin Odersky, Erik Meijer und Roland Kuhn; Coursera",
+    "date": "2015-01-01T00:00:00Z"
+  },
+  {
+    "title": "FP101x Introduction to Functional Programming",
+    "date": "2014-01-01T00:00:00Z",
+    "source": "Erik Meijer; edx"
+  },
+  {
+    "title": "Functional Programming Principles in Scala",
+    "date": "2014-01-01T00:00:00Z",
+    "source": "Martin Odersky; Coursera"
   }
 ]
