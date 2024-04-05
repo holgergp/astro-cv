@@ -1,42 +1,35 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
 import { getCollection } from "astro:content";
 import FromYearToYear from "@components/FromYearToYear.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 
 const careerCollection = await getCollection("career");
 
 const career = careerCollection.flatMap(c => c.data);
 ---
 
-<Layout>
-  <Header />
-  <main id="main-content">
-    <section>
-      <ul class="pt-2 pb-2">
-        {
-          career.map(c => (
-            <li class="grid grid-cols-1 md:grid-cols-2  pt-2 pb-1">
-              <div class="">
-                <FromYearToYear dateTimeFrom={c.from} dateTimeTo={c.to} />
-              </div>
-              <div class="flex flex-wrap">
-                <span>{c.role}</span>
-                <span class="pl-1 pr-1">@</span>
-                <span class="font-semibold dark:text-slate-1000 light:text-slate-100 hover:underline">
-                  <a href={c.link}>{c.company}</a>
-                </span>
-                <div>{c.description}</div>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-
-    <Footer />
-  </main>
+<PageLayout frontmatter={{ title: "Career", activeNav: "career" }}>
+  <ul class="">
+    {
+      career.map(c => (
+        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+          <div class="text-slate-400 mt-0 mt-0">
+            <FromYearToYear dateTimeFrom={c.from} dateTimeTo={c.to} />
+          </div>
+          <div class="flex flex-wrap gap-x-1 mb-0">
+            <span>{c.role}</span>
+            <span>@</span>
+            <span class="font-semibold">
+              <a class="prose" href={c.link}>
+                {c.company}
+              </a>
+            </span>
+            <div class="italic">{c.description}</div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 
   <style></style>
-</Layout>
+</PageLayout>
