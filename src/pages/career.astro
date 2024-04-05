@@ -13,7 +13,7 @@ const career = careerCollection.flatMap(c => c.data);
     {
       career.map(c => (
         <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
-          <div class="text-slate-400 mt-0 mt-0">
+          <div class="font-semibold mt-0">
             <FromYearToYear dateTimeFrom={c.from} dateTimeTo={c.to} />
           </div>
           <div class="flex flex-wrap gap-x-1 mb-0">
