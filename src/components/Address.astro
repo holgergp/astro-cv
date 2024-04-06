@@ -1,26 +1,28 @@
 ---
-import MapPinIcon from '../assets/mapPinIcon.astro';
+import MapPinIcon from "../assets/mapPinIcon.astro";
 interface Props {
-  street:string,
-  city: string,
-  zip: string,
-  country: string,
+  street: string;
+  city: string;
+  zip: string;
+  country: string;
   timezone?: string;
 }
 
-
-const { street,city,country,zip, timezone } = Astro.props;
-const address = `${street} ${zip} ${city} ${country}`
+const { street, city, country, zip, timezone } = Astro.props;
+const address = `${street} ${zip} ${city} ${country}`;
 ---
+
 <span class="inline-flex gap-x-1.5 align-baseline leading-none items-center">
   <MapPinIcon class="size-3" />
   <span class="flex flex-col sm:flex-row gap-y-1">
     <span>{address}</span>
-    {timezone && (
-      <span class="inline-flex">
-        <span class="hidden sm:block text-gray-300 px-2">|</span>
-        {timezone}
-      </span>
-    )}
+    {
+      timezone && (
+        <span class="inline-flex">
+          <span class="hidden sm:block  px-2">|</span>
+          {timezone}
+        </span>
+      )
+    }
   </span>
 </span>
