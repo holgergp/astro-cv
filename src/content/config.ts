@@ -86,6 +86,20 @@ const certifications = defineCollection({
   schema: () => z.array(certificationSchema),
 });
 
+const projectSchema = z.object({
+  from: z.string().datetime(),
+  to: z.string().datetime().optional(),
+  forCompany: z.string().optional(),
+  branch: z.string(),
+  description: z.string(),
+  roles: z.array(z.string()),
+  buzzwords: z.array(z.string()),
+});
+const projects = defineCollection({
+  type: "data",
+  schema: () => z.array(projectSchema),
+});
+
 export const collections = {
   blog,
   frontpage,
@@ -93,4 +107,5 @@ export const collections = {
   buzzwords,
   publications,
   certifications,
+  projects,
 };

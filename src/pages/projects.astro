@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import FromYearToYear from "@components/FromYearToYear.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import Pill from "../components/Pill.astro";
+
+const projectCollection = await getCollection("projects");
+
+const projects = projectCollection.flatMap(c => c.data);
+---
+
+<PageLayout frontmatter={{ title: "Projects", activeNav: "projects" }}>
+  <ul class="">
+    {
+      projects.map(p => (
+        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+          <div class="mt-0 font-semibold">
+            <FromYearToYear dateTimeFrom={p.from} dateTimeTo={p.to} />
+          </div>
+          <div class="italic">{p.forCompany}</div>
+          <div class="mb-0 flex flex-wrap gap-x-1 ">
+            <span>{p.roles.join(", ")}</span>
+            <div class="italic">{p.description}</div>
+            <div class="mb-0 mt-1 flex flex-wrap gap-x-1 gap-y-2">
+              {p.buzzwords.map(b => (
+                <Pill>{b}</Pill>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style></style>
+</PageLayout>

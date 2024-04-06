@@ -1,0 +1,50 @@
+[
+  {
+    "from": "2023-07-01T00:00:00Z",
+    "to": "2024-03-01T00:00:00Z",
+    "branch": "Early Stage startup | Developer Tooling",
+    "roles": ["Senior Product Engineer", "Lead Frontend Engineer"],
+    "description": "Developing an observability solution with a focus on open-telemtery",
+    "forCompany": "Dash0",
+    "buzzwords": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "SWR",
+      "Visx",
+      "D3.js",
+      "react-flow",
+      "tailwind",
+      "shadcn",
+      "radix-ui",
+      "Storybook",
+      "Chromatic",
+      "Kubernetes",
+      "Go",
+      "Gin",
+      "Github",
+      "Vercel",
+      "Clerk"
+    ]
+  },
+  {
+    "from": "2022-10-01T00:00:00Z",
+    "to": "2023-05-01T00:00:00Z",
+    "forCompany": "codecentric AG",
+    "branch": "Company information service",
+    "roles": ["Lead Frontend Engineer", "Mentor"],
+    "description": "Creation of a tool for the semi-automatic capture of company information documents",
+    "buzzwords": [
+      "React.js",
+      "Next.js",
+      "React Query",
+      "canvas",
+      "TypeScript",
+      "Spring-Boot",
+      "Postgres",
+      "Gitlab CI",
+      "Docker",
+      "Kubernetes"
+    ]
+  }
+]
