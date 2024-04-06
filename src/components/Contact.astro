@@ -5,13 +5,13 @@ import Address from "./Address.astro";
 const frontpageData = await getEntry("frontpage", "frontpage");
 ---
 
-<div class="flex items-center justify-between">
+<div class="flex w-full items-center justify-between">
   <div class="flex-1 space-y-1.5">
     <h1 class="text-2xl font-bold">{frontpageData.data.name}</h1>
     <p class="max-w-md text-pretty text-xl">
       {frontpageData.data.title}
     </p>
-    <p class="max-w-md items-center text-pretty font-mono text-l italic">
+    <p class="text-l max-w-md items-center text-pretty font-mono italic">
       <Address
         street={frontpageData.data.street}
         zip={frontpageData.data.zip}
@@ -20,16 +20,21 @@ const frontpageData = await getEntry("frontpage", "frontpage");
       />
     </p>
   </div>
-  {
-    /*       image && (
-        <span class="relative hidden size-36 shrink-0 overflow-hidden rounded-xl sm:flex">
-          <span class="bg-muted flex size-full items-center justify-center rounded-xl border border-gray-200">
-            <picture class="text-center text-4xl">
-              <source srcset={image} type="image/svg+xml" />
-              <img src={image} alt={`Photo of ${name}`} class="h-full w-full" />
-            </picture>
-          </span>
-        </span>
-      ) */
-  }
+
+  <span
+    class="relative hidden size-36 shrink-0 overflow-hidden rounded-xl sm:flex"
+  >
+    <span
+      class="bg-muted flex size-full items-center justify-center rounded-xl border border-gray-200"
+    >
+      <picture class="text-center text-4xl">
+        <source srcset={"/assets/holger.jpeg"} type="image/svg+xml" />
+        <img
+          src={"/assets/holger.jpeg"}
+          alt={`Photo of me}`}
+          class="h-full w-full"
+        />
+      </picture>
+    </span>
+  </span>
 </div>
