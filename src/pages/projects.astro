@@ -17,10 +17,15 @@ const projects = projectCollection.flatMap(c => c.data);
           <div class="mt-0 font-semibold">
             <FromYearToYear dateTimeFrom={p.from} dateTimeTo={p.to} />
           </div>
-          <div class="italic">{p.forCompany}</div>
+          <div>
+            For <span class="font-semibold">{p.forCompany}</span>
+          </div>
+          <div class="italic">{p.branch}</div>
+          <div>
+            As <span class="font-semibold">{p.roles.join(", ")}</span>
+          </div>
+          <div class="italic pb-1">{p.description}</div>
           <div class="mb-0 flex flex-wrap gap-x-1 ">
-            <span>{p.roles.join(", ")}</span>
-            <div class="italic">{p.description}</div>
             <div class="mb-0 mt-1 flex flex-wrap gap-x-1 gap-y-2">
               {p.buzzwords.map(b => (
                 <Pill>{b}</Pill>
