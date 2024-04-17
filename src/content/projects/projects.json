@@ -323,29 +323,6 @@
     ]
   },
   {
-    "from": "2007-01-01T00:00:00Z",
-    "to": "2011-12-01T00:00:00Z",
-    "forCompany": "iks GmbH",
-    "branch": "Labor union",
-    "roles": ["Engineer", "Architect", "Technical Project Lead"],
-    "description": "Agency solution for the administration of insurance products as an extension of decentralised web-based member administration",
-    "buzzwords": [
-      "Java",
-      "Java EE",
-      "Struts",
-      "JSP",
-      "iText",
-      "Selenium",
-      "JUnit",
-      "JavaScript",
-      "Yahoo UI",
-      "Ant",
-      "Subversion",
-      "Websphere AS",
-      "DB2/400"
-    ]
-  },
-  {
     "from": "2006-04-01T00:00:00Z",
     "to": "2009-02-01T00:00:00Z",
     "forCompany": "iks GmbH",
