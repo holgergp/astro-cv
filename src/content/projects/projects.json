@@ -46,5 +46,34 @@
       "Docker",
       "Kubernetes"
     ]
+  },
+  {
+    "from": "2021-01-01T00:00:00Z",
+    "to": "2022-09-01T00:00:00Z",
+    "forCompany": "codecentric AG",
+    "branch": "E-commerce",
+    "roles": ["Engineer"],
+    "description": "Connecting a swiss sales system to the online sales platform,  developing a recommendation feed for a new app generation",
+    "buzzwords": [
+      "AWS",
+      "AWS Lambda",
+      "AWS Personalize",
+      "AWS CDK",
+      "AWS S3",
+      "AWS Kinesis",
+      "Kotlin",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Gitlab CI",
+      "React.js",
+      "Redux",
+      "Jest",
+      "Pact",
+      "Firebase",
+      "Akamai",
+      "Google Optimize",
+      "Google Analytics"
+    ]
   }
 ]
