@@ -5,13 +5,15 @@ If you happen to read this Readme. This might be work in progress
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b71d2ba-25f4-4dbc-bfff-68389c239307/deploy-status)](https://app.netlify.com/sites/holgergp-cv/deploys)
 
+[Find it deployed here](cv.grosse-plankermann.com)
+
 I left the docs below in this repo for my own convenience:
 
 ## TODO
 
-- [ ] Fill out all the CV pages
+- [x] Fill out all the CV pages
 - [ ] Load data from astro DB
-- [ ] Make CV printable 
+- [ ] Make CV printable
 
 ## 👨🏻‍💻 Running Locally
 
