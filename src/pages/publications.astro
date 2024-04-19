@@ -9,6 +9,7 @@ const publications = publicationCollection.flatMap(c => c.data);
 ---
 
 <PageLayout frontmatter={{ title: "Publications", activeNav: "publications" }}>
+  <p>Things I published, or are visible online:</p>
   <ul class="">
     {
       publications.map(p => (

@@ -10,6 +10,10 @@ const projects = projectCollection.flatMap(c => c.data);
 ---
 
 <PageLayout frontmatter={{ title: "Projects", activeNav: "projects" }}>
+  <p>
+    Most of the time, I have been working as a consultant, and for many
+    different clients. Maybe you are interested in a more finegrained breakdown.
+  </p>
   <ul class="">
     {
       projects.map(p => (
@@ -24,7 +28,7 @@ const projects = projectCollection.flatMap(c => c.data);
           <div>
             As <span class="font-semibold">{p.roles.join(", ")}</span>
           </div>
-          <div class="italic pb-1">{p.description}</div>
+          <div class="pb-1 italic">{p.description}</div>
           <div class="mb-0 flex flex-wrap gap-x-1 ">
             <div class="mb-0 mt-1 flex flex-wrap gap-x-1 gap-y-2">
               {p.buzzwords.map(b => (
