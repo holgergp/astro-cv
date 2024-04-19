@@ -1,19 +1,14 @@
 # My CV 📄
 
-This is my work in progress CV webpage. I chose Astro because I think this should be a) the ideal use case for it, and b) I want to.
-If you happen to read this Readme. This might be work in progress
+This is my CV webpage. I chose Astro because I think this should be a) the ideal use case for it, and b) I want to.
+I deploy this to Netlify, because it is easy and I want to try it.
+The layout is based on the [Astro Paper](https://github.com/satnaing/astro-paper) template, because it comes close to what I want visually
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b71d2ba-25f4-4dbc-bfff-68389c239307/deploy-status)](https://app.netlify.com/sites/holgergp-cv/deploys)
 
 [Find it deployed here](https://cv.grosse-plankermann.com)
 
 I left the docs below in this repo for my own convenience:
-
-## TODO
-
-- [x] Fill out all the CV pages
-- [ ] Load data from astro DB
-- [ ] Make CV printable
 
 ## 👨🏻‍💻 Running Locally
 
@@ -60,15 +55,3 @@ All commands are run from the root of the project, from a terminal:
 | `docker compose run app npm install` | You can run any command above into the docker container.                                                                         |
 
 > **_Warning!_** Windows PowerShell users may need to install the [concurrently package](https://www.npmjs.com/package/concurrently) if they want to [run diagnostics](https://docs.astro.build/en/reference/cli-reference/#astro-check) during development (`astro check --watch & astro dev`). For more info, see [this issue](https://github.com/satnaing/astro-paper/issues/113).
-
-## ✨ Feedback & Suggestions
-
-If you have any suggestions/feedback, you can contact me via [my email](mailto:contact@satnaing.dev). Alternatively, feel free to open an issue if you find bugs or want to request new features.
-
-## 📜 License
-
-Licensed under the MIT License, Copyright © 2023
-
----
-
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
