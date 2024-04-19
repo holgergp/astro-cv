@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Holger Grosse-Plankermann",
   desc: "The CV of Holger Grosse-Plankermann",
   title: "Holger's CV",
-  ogImage: "/assets/holger.jpeg",
+  ogImage: "/assets/holger-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
