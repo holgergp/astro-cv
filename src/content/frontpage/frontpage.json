@@ -8,5 +8,6 @@
   "zip": "",
   "country": "Germany",
   "nationality": "German",
-  "title": "Lead Frontend Engineer"
+  "title": "Lead Frontend Engineer",
+  "tags": ["Next.js", "React.js", "TypeScript"]
 }
