@@ -31,6 +31,7 @@ const frontpage = defineCollection({
       phone: z.string(),
       email: z.string(),
       title: z.string(),
+      tags: z.array(z.string()),
       street: z.string(),
       city: z.string(),
       zip: z.string(),

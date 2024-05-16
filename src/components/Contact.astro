@@ -1,16 +1,20 @@
 ---
 import { getEntry } from "astro:content";
 import Address from "./Address.astro";
+import Pill from "./Pill.astro";
 
 const frontpageData = await getEntry("frontpage", "frontpage");
 ---
 
 <div class="flex w-full items-center justify-between">
-  <div class="flex-1 space-y-1.5">
+  <div class="flex-1 space-y-2">
     <h1 class="text-2xl font-bold">{frontpageData.data.name}</h1>
     <p class="max-w-md text-pretty text-xl">
       {frontpageData.data.title}
     </p>
+    <div class="flex flex-wrap gap-x-1 gap-y-2">
+      {frontpageData.data.tags.map(t => <Pill>{t}</Pill>)}
+    </div>
     <p class="text-l max-w-md items-center text-pretty font-mono italic">
       <Address
         street={frontpageData.data.street}
