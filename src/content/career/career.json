@@ -9,7 +9,7 @@
   },
   {
     "from": "2015-10-01T00:00:00Z",
-    "to": "2023-06-31T00:00:00Z",
+    "to": "2023-06-30T00:00:00Z",
     "company": "codecentric AG",
     "role": "Senior Developer | Senior IT Consultant",
     "description": "Developing software for cl  ients from the fields of e-commerce, insurances, retail or the public sector",
@@ -17,7 +17,7 @@
   },
   {
     "from": "2020-01-01T00:00:00Z",
-    "to": "2023-06-31T00:00:00Z",
+    "to": "2023-06-30T00:00:00Z",
     "company": "codecentric AG",
     "role": "Organizing and leading a JavaScript community",
     "description": "I organized and led an JavaScript community within codecentric; with meetups, conferences and various events",
@@ -39,7 +39,7 @@
   },
   {
     "from": "2006-06-01T00:00:00Z",
-    "to": "2015-09-31T00:00:00Z",
+    "to": "2015-09-30T00:00:00Z",
     "company": "iks GmbH",
     "role": "IT Consultant | Head of competence center for software engineering",
     "description": "Developing software for clients from the fields of finance, insurances, logistics ...",

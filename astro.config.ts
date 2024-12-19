@@ -9,9 +9,6 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  legacy: {
-    collections: true,
-  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
