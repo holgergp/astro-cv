@@ -12,7 +12,7 @@ const frontpageData = await getEntry("frontpage", "frontpage");
     <p class="max-w-md text-pretty text-xl">
       {frontpageData?.data.title}
     </p>
-    <div class="flex flex-wrap gap-x-1 gap-y-2">
+    <div class="w-2/3 min-w-16 flex flex-wrap gap-x-1 gap-y-2">
       {frontpageData?.data.tags.map(t => <Pill>{t}</Pill>)}
     </div>
     <p class="text-l max-w-md items-center text-pretty font-mono italic">
