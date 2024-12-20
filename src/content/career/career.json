@@ -1,5 +1,12 @@
 [
   {
+    "from": "2024-10-01T00:00:00Z",
+    "company": "JobRad",
+    "role": "Senior Frontend Engineer",
+    "description": "Helping to build the future of sustainable mobility",
+    "link": "https://jobrad.org"
+  },
+  {
     "from": "2023-07-01T00:00:00Z",
     "to": "2024-03-01T00:00:00Z",
     "company": "Dash0",

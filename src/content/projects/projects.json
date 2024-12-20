@@ -1,5 +1,22 @@
 [
   {
+    "from": "2024-10-01T00:00:00Z",
+    "branch": "Financial Services | Mobility",
+    "roles": ["Senior Frontend Engineer"],
+    "description": "Helping to build the future of sustainable mobility",
+    "forCompany": "JobRad",
+    "buzzwords": [
+      "React.js",
+      "TypeScript",
+      "vitejs",
+      "Nomad",
+      "Python",
+      "Github",
+      "Github Actions",
+      "BrowserStack"
+    ]
+  },
+  {
     "from": "2023-07-01T00:00:00Z",
     "to": "2024-03-01T00:00:00Z",
     "branch": "Early Stage startup | Developer Tooling",
