@@ -2,12 +2,12 @@ import { test, expect, } from '@playwright/test';
 import percySnapshot from "@percy/playwright";
 
 test.describe('navigation', () => {
-  ['career', 'buzzwords', 'publications', 'certifications', 'projects'].forEach((page) => {
-    test(`navigate to ${page}`, async ({ page, browserName }) => {
-      await page.goto(`/${page}`);
+  ['career', 'buzzwords', 'publications', 'certifications', 'projects'].forEach((pageName) => {
+    test(`navigate to ${pageName}`, async ({ page, browserName }) => {
+      await page.goto(`/${pageName}`);
 
       await expect(page).toHaveTitle(/Holger/);
-      await percySnapshot(page, `navigate to ${page} with ${browserName}`);
+      await percySnapshot(page, `navigate to ${pageName} with ${browserName}`);
     });
   });
 
