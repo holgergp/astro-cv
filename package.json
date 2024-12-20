@@ -12,7 +12,9 @@
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "cz": "cz",
     "prepare": "husky install",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "playwright test",
+    "test:e2e:percy": "percy exec -- playwright test"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
@@ -34,8 +36,12 @@
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "5.1.4",
     "@divriots/jampack": "0.32.0",
+    "@percy/cli": "^1.30.5",
+    "@percy/playwright": "^1.0.7",
+    "@playwright/test": "^1.49.1",
     "@tailwindcss/typography": "0.5.15",
     "@types/github-slugger": "2.0.0",
+    "@types/node": "^22.10.2",
     "@types/react": "19.0.2",
     "@typescript-eslint/parser": "8.18.1",
     "astro-eslint-parser": "1.1.0",
