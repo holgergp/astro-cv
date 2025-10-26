@@ -1,57 +1,67 @@
 # My CV 📄
 
-This is my CV webpage. I chose Astro because I think this should be a) the ideal use case for it, and b) I want to.
-I deploy this to Netlify, because it is easy and I want to try it.
-The layout is based on the [Astro Paper](https://github.com/satnaing/astro-paper) template, because it comes close to what I want visually
+This is my personal CV website built with Astro and deployed on Netlify.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b71d2ba-25f4-4dbc-bfff-68389c239307/deploy-status)](https://app.netlify.com/sites/holgergp-cv/deploys)
 
-[Find it deployed here](https://cv.grosse-plankermann.com)
+**[View live site →](https://cv.grosse-plankermann.com)**
 
-I left the docs below in this repo for my own convenience:
+## About
 
-## 👨🏻‍💻 Running Locally
+I chose Astro for this project because:
 
-The easiest way to run this project locally is to run the following command in your desired directory.
+- It's the ideal use case for a static CV site
+- I wanted to explore the framework
+- The layout is based on the [Astro Paper](https://github.com/satnaing/astro-paper) template, which provides a clean, professional design
+
+The site includes:
+
+- **Career history** - Professional experience timeline
+- **Projects** - Portfolio of significant projects
+- **Publications** - Articles and blog posts
+- **Certifications** - Professional certifications
+- **Skills/Buzzwords** - Technical skills organized by category
+
+All content is managed through Astro's Content Collections system, stored as JSON files in `src/content/`.
+
+## Tech Stack
+
+- **Framework**: Astro 5.x
+- **Styling**: Tailwind CSS with custom theming
+- **Deployment**: Netlify (auto-deploys from `main` branch)
+- **Content**: Astro Content Collections (JSON-based)
+- **Testing**: Playwright E2E tests
+
+## Quick Start
 
 ```bash
-# npm 6.x
-npm create astro@latest --template satnaing/astro-paper
+# Install dependencies
+npm install
 
-# npm 7+, extra double-dash is needed:
-npm create astro@latest -- --template satnaing/astro-paper
+# Start development server at localhost:4321
+npm run dev
 
-# yarn
-yarn create astro --template satnaing/astro-paper
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-## Google Site Verification (optional)
+## Development
 
-You can easily add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) in AstroPaper using environment variable. This step is optional. If you don't add the following env variable, the google-site-verification tag won't appear in the html `<head>` section.
+For detailed development information including:
 
-```bash
-# in your environment variable file (.env)
-PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
-```
+- Full command reference
+- Architecture overview
+- Content collections schema
+- Testing setup
+- Git workflow
 
-## 🧞 Commands
+See **[CLAUDE.md](./CLAUDE.md)** for comprehensive documentation.
 
-All commands are run from the root of the project, from a terminal:
+For Astro Paper template documentation including Docker setup, Google Site Verification, and platform-specific notes, see **[astro-cv-docs.md](./astro-cv-docs.md)**.
 
-> **_Note!_** For `Docker` commands we must have it [installed](https://docs.docker.com/engine/install/) in your machine.
+## Configuration
 
-| Command                              | Action                                                                                                                           |
-| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `npm install`                        | Installs dependencies                                                                                                            |
-| `npm run dev`                        | Starts local dev server at `localhost:4321`                                                                                      |
-| `npm run build`                      | Build your production site to `./dist/`                                                                                          |
-| `npm run preview`                    | Preview your build locally, before deploying                                                                                     |
-| `npm run format:check`               | Check code format with Prettier                                                                                                  |
-| `npm run format`                     | Format codes with Prettier                                                                                                       |
-| `npm run sync`                       | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `npm run cz`                         | Commit code changes with commitizen                                                                                              |
-| `npm run lint`                       | Lint with ESLint                                                                                                                 |
-| `docker compose up -d`               | Run AstroPaper on docker, You can access with the same hostname and port informed on `dev` command.                              |
-| `docker compose run app npm install` | You can run any command above into the docker container.                                                                         |
-
-> **_Warning!_** Windows PowerShell users may need to install the [concurrently package](https://www.npmjs.com/package/concurrently) if they want to [run diagnostics](https://docs.astro.build/en/reference/cli-reference/#astro-check) during development (`astro check --watch & astro dev`). For more info, see [this issue](https://github.com/satnaing/astro-paper/issues/113).
+Site configuration is in `src/config.ts` - update personal info, social links, and site metadata there.
