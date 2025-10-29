@@ -14,20 +14,26 @@
     "featured": true
   },
   {
+    "date": "2025-05-07T00:00:00Z",
+    "source": "EnterJS 2025",
+    "coauthor": "Stefan Spittank",
+    "title": "We will mock you! Mocking in Frontend-Tests erklärt\n",
+    "link": "https://enterjs.de/2025/veranstaltung-82695-0-we-will-mock-you-mocking-in-frontend-tests-erklaert.html",
+    "featured": true
+  },
+  {
     "date": "2024-10-17T00:00:00Z",
     "source": "EnterJS React Day 2024",
     "coauthor": "Stefan Spittank",
     "title": "React 19 glänzt! So schön neu! Wirklich alles?",
-    "link": "https://www.youtube.com/watch?v=3ygU03OCTTI",
-    "featured": true
+    "link": "https://www.youtube.com/watch?v=3ygU03OCTTI"
   },
   {
     "date": "2023-01-10T00:00:00Z",
     "source": "EnterJS 2023, Darmstadt",
     "coauthor": "Stefan Spittank",
     "title": "Nein! Doch! Oh!! – Diese 5 Dinge machen Webentwicklung 2023 besser!",
-    "link": "https://www.youtube.com/watch?v=9xkiIrQhg8s",
-    "featured": true
+    "link": "https://www.youtube.com/watch?v=9xkiIrQhg8s"
   },
   {
     "date": "2022-01-01T00:00:00Z",
