@@ -54,6 +54,7 @@
       "Maven",
       "Gradle",
       "Docker",
+      "Nomad",
       "Kubernetes",
       "Tomcat",
       "Gin",
@@ -70,6 +71,8 @@
   {
     "name": "Testing",
     "buzzwords": [
+      "vitest",
+      "Playwright",
       "Jest",
       "react-testing-library",
       "Storybook",
