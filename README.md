@@ -68,3 +68,4 @@ For Astro Paper template documentation including Docker setup, Google Site Verif
 ## Configuration
 
 Site configuration is in `src/config.ts` - update personal info, social links, and site metadata there.
+
