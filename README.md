@@ -1,8 +1,9 @@
 # My CV 📄
 
-This is my personal CV website built with Astro and deployed on Netlify.
+This is my personal CV website built with Astro and deployed on statichost.eu (with European hosting).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b71d2ba-25f4-4dbc-bfff-68389c239307/deploy-status)](https://app.netlify.com/sites/holgergp-cv/deploys)
+_Netlify badge shows status of PR preview deployments_
 
 **[View live site →](https://cv.grosse-plankermann.com)**
 
@@ -28,7 +29,9 @@ All content is managed through Astro's Content Collections system, stored as JSO
 
 - **Framework**: Astro 5.x
 - **Styling**: Tailwind CSS with custom theming
-- **Deployment**: Netlify (auto-deploys from `main` branch)
+- **Deployment**:
+  - **Production**: statichost.eu (auto-deploys from `main` branch via Github webhooks, hosted in Europe)
+  - **Preview**: Netlify (for PR preview deployments)
 - **Content**: Astro Content Collections (JSON-based)
 - **Testing**: Playwright E2E tests
 
