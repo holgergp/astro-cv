@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal CV website built with Astro, based on the AstroPaper template. It's deployed to Netlify at https://cv.grosse-plankermann.com.
+This is a personal CV website built with Astro, based on the AstroPaper template. It's deployed to statichost.eu at https://cv.grosse-plankermann.com (backed by https://holgergp-cv.statichost.page/).
 
 ## Development Commands
 
@@ -97,4 +97,5 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 - Lint-staged runs Prettier on staged files before commit
 - Commitizen configured for conventional commits (use `npm run cz`)
 - Main branch: `main`
-- Deploys to Netlify on push
+- **Production deployment**: Deploys to statichost.eu via Github webhooks on push/merge to main (hosting in Europe)
+- **Preview deployments**: Netlify is still used for PR preview deployments
