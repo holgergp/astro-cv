@@ -10,10 +10,12 @@ const career = careerCollection.flatMap(c => c.data);
 
 <PageLayout frontmatter={{ title: "Career", activeNav: "career" }}>
   <p>The various stages I've been at thus far. I enjoyed all of them!</p>
-  <ul class="">
+  <ul class="space-y-4">
     {
       career.map(c => (
-        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+        <li
+          class={`md:grid-cols-2 grid grid-cols-1 pb-2 pt-2 px-3 rounded-lg border-l-4 ${!c.to ? "bg-skin-card-muted/20 border-skin-accent shadow-sm" : "border-transparent"}`}
+        >
           <div class="font-semibold mt-0">
             <FromYearToYear dateTimeFrom={c.from} dateTimeTo={c.to} />
           </div>
