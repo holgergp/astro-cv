@@ -11,6 +11,12 @@ const { dateTimeFrom, dateTimeTo } = Astro.props;
 <div class="flex">
   <Year dateTime={dateTimeFrom} />
   -
-  {dateTimeTo ? <Year dateTime={dateTimeTo} /> : <div>today</div>}
+  {
+    dateTimeTo ? (
+      <Year dateTime={dateTimeTo} />
+    ) : (
+      <div class="font-bold text-skin-accent">today</div>
+    )
+  }
 </div>
 <style></style>
