@@ -17,11 +17,11 @@
     "test:e2e:percy": "percy exec -- playwright test"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.5",
-    "@astrojs/rss": "4.0.13",
+    "@astrojs/check": "0.9.6",
+    "@astrojs/rss": "4.0.15",
     "@radix-ui/react-collapsible": "1.1.12",
     "@resvg/resvg-js": "2.6.2",
-    "astro": "5.15.7",
+    "astro": "5.16.11",
     "fuse.js": "7.1.0",
     "github-slugger": "2.0.0",
     "remark-collapse": "0.1.2",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/react": "4.4.2",
-    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/sitemap": "3.7.0",
     "@astrojs/tailwind": "6.0.2",
     "@divriots/jampack": "0.34.0",
     "@percy/cli": "1.31.4",
