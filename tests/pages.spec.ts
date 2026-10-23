@@ -2,7 +2,7 @@ import { test, expect, } from '@playwright/test';
 import percySnapshot from "@percy/playwright";
 
 test.describe('navigation', () => {
-  ['career', 'buzzwords', 'publications', 'certifications', 'projects'].forEach((pageName) => {
+  ['career', 'buzzwords', 'publications', 'certifications', 'projects', 'impressum', 'datenschutz'].forEach((pageName) => {
     test(`navigate to ${pageName}`, async ({ page, browserName }) => {
       await page.goto(`/${pageName}`);
 
