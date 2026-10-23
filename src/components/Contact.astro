@@ -7,7 +7,7 @@ const frontpageData = await getEntry("frontpage", "frontpage");
 ---
 
 <div class="flex w-full items-center justify-between">
-  <div class="flex-1 space-y-2">
+  <div class="flex-1 [&>*+*]:mt-2! [&>*+*]:mb-0!">
     <h1 class="text-2xl font-bold">{frontpageData?.data.name}</h1>
     <p class="max-w-md text-pretty text-xl">
       {frontpageData?.data.title}

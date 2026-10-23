@@ -26,10 +26,17 @@ const { centered = false } = Astro.props;
 </div>
 
 <style>
-  .social-icons {
-    @apply flex-wrap justify-center gap-1;
-  }
-  .link-button {
-    @apply p-2 hover:rotate-6 sm:p-1;
+  @reference "@styles/base.css";
+
+  /* keep Tailwind's layer order even if this CSS loads first */
+  @layer theme, base, components, utilities;
+
+  @layer components {
+    .social-icons {
+      @apply flex-wrap justify-center gap-1;
+    }
+    .link-button {
+      @apply p-2 hover:rotate-6 sm:p-1;
+    }
   }
 </style>

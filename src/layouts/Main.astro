@@ -36,13 +36,20 @@ const { props } = Astro;
 </main>
 
 <style>
-  #main-content {
-    @apply mx-auto w-full max-w-3xl px-4 pb-4;
-  }
-  #main-content h1 {
-    @apply text-2xl font-semibold sm:text-3xl;
-  }
-  #main-content p {
-    @apply mb-6 mt-2 italic;
+  @reference "@styles/base.css";
+
+  /* keep Tailwind's layer order even if this CSS loads first */
+  @layer theme, base, components, utilities;
+
+  @layer components {
+    #main-content {
+      @apply mx-auto w-full max-w-3xl px-4 pb-4;
+    }
+    #main-content h1 {
+      @apply text-2xl font-semibold sm:text-3xl;
+    }
+    #main-content p {
+      @apply mb-6 mt-2 italic;
+    }
   }
 </style>

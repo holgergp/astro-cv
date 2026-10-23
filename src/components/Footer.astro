@@ -32,22 +32,29 @@ const { noMarginTop = false } = Astro.props;
 </footer>
 
 <style>
-  footer {
-    @apply w-full;
-  }
-  .footer-wrapper {
-    @apply flex flex-col items-center justify-between sm:flex-row-reverse;
-  }
-  .link-button {
-    @apply my-1 p-2 hover:rotate-6;
-  }
-  .link-button svg {
-    @apply scale-125;
-  }
-  .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
-  }
-  .separator {
-    @apply hidden sm:inline;
+  @reference "@styles/base.css";
+
+  /* keep Tailwind's layer order even if this CSS loads first */
+  @layer theme, base, components, utilities;
+
+  @layer components {
+    footer {
+      @apply w-full;
+    }
+    .footer-wrapper {
+      @apply flex flex-col items-center justify-between sm:flex-row-reverse;
+    }
+    .link-button {
+      @apply my-1 p-2 hover:rotate-6;
+    }
+    .link-button svg {
+      @apply scale-125;
+    }
+    .copyright-wrapper {
+      @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
+    }
+    .separator {
+      @apply hidden sm:inline;
+    }
   }
 </style>
