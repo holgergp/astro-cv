@@ -65,11 +65,15 @@ Three main layouts in `src/layouts/`:
 
 - **Site config**: `src/config.ts` - Site metadata, author info, social links
 - **Astro config**: `astro.config.ts` - Integrations (Tailwind, React, Sitemap), markdown plugins (remark-toc, remark-collapse)
-- **Tailwind config**: `tailwind.config.cjs` - Custom theme with CSS variable-based "skin" tokens for theming
+- **Tailwind config**: Tailwind CSS v4 via `@tailwindcss/vite`, configured CSS-first in `src/styles/base.css` (`@theme` block with CSS variable-based "skin" tokens)
 
 ### Styling Approach
 
-The site uses a custom theming system via Tailwind CSS with CSS variables. Colors are abstracted using the `withOpacity` helper function and applied via classes like `text-skin-base`, `bg-skin-fill`, etc. This enables easy theme switching while maintaining a single color definition source.
+The site uses a custom theming system via Tailwind CSS v4 with CSS variables. The light/dark RGB triplets live in `:root`/`html[data-theme]`, and the `@theme` block in `src/styles/base.css` maps them to per-utility tokens (`--text-color-skin-*`, `--background-color-skin-*`, ...), applied via classes like `text-skin-base`, `bg-skin-fill`, `bg-skin-inverted/50`. This enables easy theme switching while maintaining a single color definition source.
+
+Component `<style>` blocks that use `@apply` must start with `@reference "@styles/base.css";`, declare `@layer theme, base, components, utilities;`, and wrap their rules in `@layer components { ... }`. Without the layer, unlayered component CSS overrides Tailwind utility classes (v4 utilities live in cascade layers); without the order statement, a component stylesheet loaded first would put `components` below `base`/preflight.
+
+Note: v4 `space-x-*`/`space-y-*` use zero-specificity `:where()` selectors, so inside `.prose` the typography margins win; use the `!` suffix or explicit margins there.
 
 ### Build Process
 
@@ -90,6 +94,14 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 - **Satori + sharp** - Dynamic OG image generation
 - **Fuse.js** - Search functionality
 - **Playwright** - E2E testing
+
+## Dependency Versions
+
+- **Always use pinned, exact versions** in `package.json` (e.g. `"tailwindcss": "4.3.3"`), never ranges like `^4.3.3` or `~4.3.3`.
+- Install new packages with `npm install --save-exact` (or `-E`).
+- Node.js is pinned in `.nvmrc` (currently 24.22.1); Netlify and the GitHub workflow read it.
+- Some tools (e.g. `@tailwindcss/upgrade`, `astro add`) write caret ranges, so check `package.json` afterwards and pin them.
+- `prettier-plugin-tailwindcss` 0.8.x (with prettier 3.6 + prettier-plugin-astro 0.14) **corrupts `.astro` files** (replaces them with `<object></object>`) and crashes on `.ts`. Stay on 0.7.x until verified; always dry-run prettier on a copy after bumping it, since the lint-staged hook runs `prettier --write`.
 
 ## Git Workflow
 
