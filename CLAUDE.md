@@ -109,5 +109,7 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 - Lint-staged runs Prettier on staged files before commit
 - Commitizen configured for conventional commits (use `npm run cz`)
 - Main branch: `main`
+- **Branch protection on `main`**: changes go through PRs; the `build`, `lint` and `format` jobs of `.github/workflows/ci.yml` are required status checks. Run `npm run build`, `npm run lint` and `npm run format:check` locally before pushing.
+- ESLint uses the flat config in `eslint.config.mjs` (lints `.js`/`.mjs` and `.astro` files).
 - **Production deployment**: Deploys to statichost.eu via Github webhooks on push/merge to main (hosting in Europe)
 - **Preview deployments**: Netlify is still used for PR preview deployments
