@@ -14,12 +14,12 @@ const career = careerCollection.flatMap(c => c.data);
     {
       career.map(c => (
         <li
-          class={`md:grid-cols-2 grid grid-cols-1 pb-2 pt-2 px-3 rounded-lg border-l-4 ${!c.to ? "bg-skin-card-muted/20 border-skin-accent shadow-xs" : "border-transparent"}`}
+          class={`md:grid-cols-2 grid grid-cols-1 rounded-lg border-l-4 px-3 pt-2 pb-2 ${!c.to ? "border-skin-accent bg-skin-card-muted/20 shadow-xs" : "border-transparent"}`}
         >
-          <div class="font-semibold mt-0">
+          <div class="mt-0 font-semibold">
             <FromYearToYear dateTimeFrom={c.from} dateTimeTo={c.to} />
           </div>
-          <div class="flex flex-wrap gap-x-1 mb-0">
+          <div class="mb-0 flex flex-wrap gap-x-1">
             <span>{c.role}</span>
             <span>@</span>
             <span class="font-semibold">

@@ -17,7 +17,7 @@ const projects = projectCollection.flatMap(c => c.data);
   <ul class="">
     {
       projects.map(p => (
-        <li class="md:grid-cols-2 grid grid-cols-1  pb-1 pt-2  ">
+        <li class="md:grid-cols-2 grid grid-cols-1 pt-2 pb-1">
           <div class="mt-0 font-semibold">
             <FromYearToYear dateTimeFrom={p.from} dateTimeTo={p.to} />
           </div>
@@ -29,8 +29,8 @@ const projects = projectCollection.flatMap(c => c.data);
             As <span class="font-semibold">{p.roles.join(", ")}</span>
           </div>
           <div class="pb-1 italic">{p.description}</div>
-          <div class="mb-0 flex flex-wrap gap-x-1 ">
-            <div class="mb-0 mt-1 flex flex-wrap gap-x-1 gap-y-2">
+          <div class="mb-0 flex flex-wrap gap-x-1">
+            <div class="mt-1 mb-0 flex flex-wrap gap-x-1 gap-y-2">
               {p.buzzwords.map(b => (
                 <Pill>{b}</Pill>
               ))}

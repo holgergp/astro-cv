@@ -100,7 +100,8 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 - Install new packages with `npm install --save-exact` (or `-E`).
 - Node.js is pinned in `.nvmrc` (currently 24.22.1); Netlify and the GitHub workflow read it.
 - Some tools (e.g. `@tailwindcss/upgrade`, `astro add`) write caret ranges, so check `package.json` afterwards and pin them.
-- `prettier-plugin-tailwindcss` 0.8.x (with prettier 3.6 + prettier-plugin-astro 0.14) **corrupts `.astro` files** (replaces them with `<object></object>`) and crashes on `.ts`. Stay on 0.7.x until verified; always dry-run prettier on a copy after bumping it, since the lint-staged hook runs `prettier --write`.
+- Prettier plugins are loaded only via `plugins` in `.prettierrc`. Don't pass `--plugin=...` on the command line: it replaces that list, which silently disabled `prettier-plugin-tailwindcss` (class sorting) until 2026-10.
+- `prettier-plugin-tailwindcss` 0.8.x once corrupted `.astro` files (replaced them with `<object></object>`) with prettier 3.6; with prettier 3.9.10 it formats identically to 0.7.4. Still dry-run prettier on a copy after bumping prettier or its plugins, since the lint-staged hook runs `prettier --write`.
 
 ## Git Workflow
 
