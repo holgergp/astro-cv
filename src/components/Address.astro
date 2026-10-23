@@ -12,14 +12,14 @@ const { street, city, country, zip, timezone } = Astro.props;
 const address = `${street} ${zip} ${city} ${country}`;
 ---
 
-<span class="inline-flex gap-x-1.5 align-baseline leading-none items-center">
+<span class="inline-flex items-center gap-x-1.5 align-baseline leading-none">
   <MapPinIcon class="size-3" />
-  <span class="flex flex-col sm:flex-row gap-y-1">
+  <span class="flex flex-col gap-y-1 sm:flex-row">
     <span>{address}</span>
     {
       timezone && (
         <span class="inline-flex">
-          <span class="hidden sm:block  px-2">|</span>
+          <span class="hidden px-2 sm:block">|</span>
           {timezone}
         </span>
       )
