@@ -7,7 +7,7 @@
   --breakpoint-*: initial;
   --breakpoint-sm: 640px;
 
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono Variable", monospace;
 
   /* "skin" tokens: some names map to different colors per utility */
   --text-color-skin-base: rgb(var(--color-text-base));
