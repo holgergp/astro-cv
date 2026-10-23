@@ -32,9 +32,8 @@ npm run cz               # Commit with commitizen (conventional commits)
 
 ### Content Collections
 
-The site uses Astro Content Collections (defined in `src/content/config.ts`) for structured data:
+The site uses Astro Content Collections (defined in `src/content.config.ts`, each with a `glob()` loader and a Zod 4 schema from `astro/zod`) for structured data:
 
-- **blog**: Markdown blog posts with frontmatter (author, pubDatetime, tags, etc.)
 - **frontpage**: JSON data for personal info (name, contact, address, etc.)
 - **career**: JSON array of career items with date ranges, company, role, description
 - **buzzwords**: JSON array of skill categories with buzzword lists
@@ -42,7 +41,7 @@ The site uses Astro Content Collections (defined in `src/content/config.ts`) for
 - **certifications**: JSON array of certifications
 - **projects**: JSON array of project items with date ranges, roles, and buzzwords
 
-All collection data lives in `src/content/[collection-name]/` directories as JSON or Markdown files.
+All collection data lives in `src/content/[collection-name]/` directories, one JSON file per collection. Read it with `getCollection(...)` / `getEntry(...)`; the entry id is the file name without extension.
 
 ### Pages Structure
 
