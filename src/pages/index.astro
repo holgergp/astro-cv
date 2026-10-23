@@ -55,48 +55,55 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     </p>
 
     <style>
-      /* ===== Hero Section ===== */
-      #hero {
-        @apply pb-6 pt-8;
-      }
+      @reference "@styles/base.css";
 
-      #hero h1 {
-        @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-      }
+      /* keep Tailwind's layer order even if this CSS loads first */
+      @layer theme, base, components, utilities;
 
-      #hero .rss-link {
-        @apply mb-6;
-      }
+      @layer components {
+        /* ===== Hero Section ===== */
+        #hero {
+          @apply pb-6 pt-8;
+        }
 
-      #hero .rss-icon {
-        @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-      }
+        #hero h1 {
+          @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+        }
 
-      #hero p {
-        @apply my-2;
-      }
+        #hero .rss-link {
+          @apply mb-6;
+        }
 
-      .social-wrapper {
-        @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-      }
+        #hero .rss-icon {
+          @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+        }
 
-      .social-links {
-        @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-      }
+        #hero p {
+          @apply my-2;
+        }
 
-      /* ===== Featured & Recent Posts Sections ===== */
-      #featured,
-      #recent-posts {
-        @apply pb-6 pt-12;
-      }
+        .social-wrapper {
+          @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+        }
 
-      #featured h2,
-      #recent-posts h2 {
-        @apply text-2xl font-semibold tracking-wide;
-      }
+        .social-links {
+          @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+        }
 
-      .all-posts-btn-wrapper {
-        @apply my-8 text-center;
+        /* ===== Featured & Recent Posts Sections ===== */
+        #featured,
+        #recent-posts {
+          @apply pb-6 pt-12;
+        }
+
+        #featured h2,
+        #recent-posts h2 {
+          @apply text-2xl font-semibold tracking-wide;
+        }
+
+        .all-posts-btn-wrapper {
+          @apply my-8 text-center;
+        }
       }
     </style>
   </div>
