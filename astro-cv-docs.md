@@ -44,7 +44,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run cz`                         | Commit code changes with commitizen                                                                                              |
 | `npm run lint`                       | Lint with ESLint                                                                                                                 |
 | `npm run test:e2e`                   | Run Playwright E2E tests                                                                                                         |
-| `npm run test:e2e:percy`             | Run Playwright tests with Percy visual testing                                                                                   |
+| `npm run test:e2e:container`         | Run Playwright tests in the CI container, including screenshot comparisons                                                       |
+| `npm run test:e2e:update-screenshots` | Regenerate the screenshot baselines in the CI container                                                                          |
 | `docker compose up -d`               | Run AstroPaper on docker, You can access with the same hostname and port informed on `dev` command.                              |
 | `docker compose run app npm install` | You can run any command above into the docker container.                                                                         |
 

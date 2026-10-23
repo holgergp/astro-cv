@@ -4,6 +4,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # Started by the Update Screenshots workflow after it pushes new baselines
+  workflow_dispatch:
 jobs:
   # The container image must match the installed @playwright/test version,
   # so read it from package.json instead of pinning it here
@@ -34,9 +36,7 @@ jobs:
       - name: Build App
         run: npm run build
       - name: Run Playwright tests
-        run: npm run test:e2e:percy
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run test:e2e
       - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:

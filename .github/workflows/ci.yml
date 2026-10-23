@@ -4,6 +4,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # Started by the Update Screenshots workflow after it pushes new baselines
+  workflow_dispatch:
 
 # Job names (build, lint, format) are required status checks for main;
 # keep them in sync with the branch protection settings when renaming.

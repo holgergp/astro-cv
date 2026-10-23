@@ -13,6 +13,10 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  snapshotPathTemplate: '{testDir}/screenshots/{arg}{ext}',
+  /* Screenshot baselines come from the CI container; local browsers render a few
+     pixels differently, so compare them only in CI (or `npm run test:e2e:container`) */
+  ignoreSnapshots: !process.env.CI,
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -24,8 +28,8 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   webServer: {
-    // Bind to IPv4 explicitly: Percy fetches fonts directly from 127.0.0.1, which
-    // fails in CI when "localhost" resolves to ::1 (fonts then render as fallback)
+    // Bind to IPv4 explicitly: "localhost" resolves to ::1 in the CI container,
+    // and Percy once failed to fetch the fonts from 127.0.0.1 because of that
     command: 'npm run preview -- --host 127.0.0.1',
     url: 'http://127.0.0.1:4321/',
     timeout: 120 * 1000,
