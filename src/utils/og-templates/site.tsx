@@ -31,6 +31,7 @@ export default () => {
 
       <div
         style={{
+          position: "relative",
           border: "4px solid #000",
           background: "#fefbfb",
           borderRadius: "4px",
@@ -63,8 +64,10 @@ export default () => {
               textAlign: "center",
             }}
           >
-            <p style={{ fontSize: 72, fontWeight: "bold" }}>{SITE.title}</p>
-            <p style={{ fontSize: 28 }}>{SITE.desc}</p>
+            <p style={{ fontSize: 72, fontWeight: "bold", margin: 0 }}>
+              {SITE.title}
+            </p>
+            <p style={{ fontSize: 28, margin: "40px 0 0" }}>{SITE.desc}</p>
           </div>
 
           <div
