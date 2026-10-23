@@ -21,8 +21,9 @@ npm run format:check     # Check code formatting
 npm run lint             # Run ESLint
 
 # Testing
-npm run test:e2e         # Run Playwright E2E tests
-npm run test:e2e:percy   # Run Playwright tests with Percy visual testing
+npm run test:e2e                     # Run Playwright E2E tests (screenshot comparisons skipped locally)
+npm run test:e2e:container           # Run them in the CI container, including screenshots (podman or docker)
+npm run test:e2e:update-screenshots  # Regenerate screenshot baselines in the CI container
 
 # Other
 npm run sync             # Generate TypeScript types for Astro modules
@@ -85,7 +86,9 @@ The build command (`npm run build`) runs three steps:
 
 ### Testing
 
-E2E tests use Playwright with a single chromium browser configuration. Tests are in `tests/` directory and run against the preview server. Percy integration is available for visual regression testing.
+E2E tests use Playwright with a single chromium browser configuration. Tests are in `tests/` directory and run against the preview server on `127.0.0.1` ("localhost" resolves to `::1` in the CI container).
+
+Visual regression testing uses Playwright's `toHaveScreenshot()` in `tests/pages.spec.ts`: every page in light/dark at 1280px and 390px, with baselines in `tests/screenshots/`. Baselines must be rendered in the same `mcr.microsoft.com/playwright` container image CI uses (local browsers differ by a few anti-aliased pixels), so `ignoreSnapshots` skips the comparisons outside CI. After an intended visual change, update the baselines with `npm run test:e2e:update-screenshots` or run the **Update Screenshots** workflow on the PR branch (Actions → Run workflow). The workflow commits the new baselines and then starts the CI and Playwright workflows via `workflow_dispatch`, because pushes made with `GITHUB_TOKEN` don't trigger workflows.
 
 ## Key Dependencies
 

@@ -1,0 +1,78 @@
+name: Update Screenshots
+# Run manually on a PR branch ("Run workflow", pick the branch) to regenerate
+# the Playwright screenshot baselines in tests/screenshots/ and commit them
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  # Pushes made with GITHUB_TOKEN don't trigger workflows, so the required
+  # checks are started explicitly via workflow_dispatch after the push
+  actions: write
+
+jobs:
+  playwright-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: version
+        run: echo "version=$(jq -r '.devDependencies["@playwright/test"]' package.json)" >> "$GITHUB_OUTPUT"
+
+  update:
+    needs: playwright-version
+    if: github.ref_name != 'main'
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    # Same image as the Playwright Tests workflow, so the baselines match CI
+    container:
+      image: mcr.microsoft.com/playwright:v${{ needs.playwright-version.outputs.version }}-noble
+    outputs:
+      pushed: ${{ steps.commit.outputs.pushed }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - name: Install dependencies
+        run: npm ci
+      - name: Build App
+        run: npm run build
+      - name: Update screenshots
+        run: npx playwright test tests/pages.spec.ts --update-snapshots
+      - name: Commit and push changed screenshots
+        id: commit
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git add tests/screenshots
+          if git diff --cached --quiet; then
+            echo "No screenshot changes" >> "$GITHUB_STEP_SUMMARY"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --stat >> "$GITHUB_STEP_SUMMARY"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "test: update screenshot baselines"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  # Separate job: the Playwright image has no gh CLI
+  run-checks:
+    needs: update
+    if: needs.update.outputs.pushed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run checks on the new commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
+          gh workflow run playwright.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"

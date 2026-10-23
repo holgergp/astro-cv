@@ -15,7 +15,8 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "test:e2e": "playwright test",
-    "test:e2e:percy": "percy exec -- playwright test"
+    "test:e2e:container": "./scripts/playwright-container.sh",
+    "test:e2e:update-screenshots": "./scripts/playwright-container.sh tests/pages.spec.ts --update-snapshots"
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",
@@ -28,8 +29,6 @@
     "@astrojs/sitemap": "3.7.4",
     "@divriots/jampack": "0.34.2",
     "@eslint/js": "10.0.1",
-    "@percy/cli": "1.32.12",
-    "@percy/playwright": "1.1.2",
     "@playwright/test": "1.64.1",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
