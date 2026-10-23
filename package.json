@@ -33,7 +33,7 @@
     "@astrojs/react": "7.1.1",
     "@astrojs/sitemap": "3.7.4",
     "@divriots/jampack": "0.34.2",
-    "@eslint/js": "9.39.5",
+    "@eslint/js": "10.0.1",
     "@percy/cli": "1.32.12",
     "@percy/playwright": "1.1.2",
     "@playwright/test": "1.64.1",
