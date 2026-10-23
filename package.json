@@ -19,14 +19,11 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",
-    "@resvg/resvg-js": "2.6.2",
     "astro": "7.4.2",
-    "satori": "0.63.2",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@astrojs/react": "7.1.1",
     "@astrojs/sitemap": "3.7.4",
     "@divriots/jampack": "0.34.2",
     "@eslint/js": "10.0.1",
@@ -36,7 +33,6 @@
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "24.19.2",
-    "@types/react": "19.3.0",
     "@typescript-eslint/parser": "8.72.0",
     "astro-eslint-parser": "3.2.0",
     "commitizen": "4.3.2",
@@ -48,9 +44,7 @@
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "0.8.1",
-    "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "prettier-plugin-tailwindcss": "0.8.1"
   },
   "config": {
     "commitizen": {

@@ -56,15 +56,14 @@ Main pages are in `src/pages/`:
 
 ### Layouts
 
-Three main layouts in `src/layouts/`:
+Two layouts in `src/layouts/`:
 - `Layout.astro` - Base layout with HTML structure
-- `Main.astro` - Main content wrapper
-- `PageLayout.astro` - Page-specific layout wrapper
+- `PageLayout.astro` - Page layout with header, breadcrumbs and footer
 
 ### Configuration
 
 - **Site config**: `src/config.ts` - Site metadata, author info, social links
-- **Astro config**: `astro.config.ts` - Integrations (React, Sitemap), Tailwind Vite plugin, `@styles` alias, `compressHTML: true` (Astro 7's `"jsx"` default drops whitespace between inline elements, e.g. in the breadcrumbs)
+- **Astro config**: `astro.config.ts` - Integrations (Sitemap), Tailwind Vite plugin, `@styles` alias, `compressHTML: true` (Astro 7's `"jsx"` default drops whitespace between inline elements, e.g. in the breadcrumbs)
 - **Tailwind config**: Tailwind CSS v4 via `@tailwindcss/vite`, configured CSS-first in `src/styles/base.css` (`@theme` block with CSS variable-based "skin" tokens)
 
 ### Styling Approach
@@ -90,9 +89,6 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 
 - **Astro 7.x** - Core framework (needs Node >= 22.23.4)
 - **Tailwind CSS** - Styling with custom theme system
-- **React** - For interactive components (via @astrojs/react)
-- **Satori + sharp** - Dynamic OG image generation
-- **Fuse.js** - Search functionality
 - **Playwright** - E2E testing
 
 ## Dependency Versions
