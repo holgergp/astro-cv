@@ -72,6 +72,8 @@ The site uses a custom theming system via Tailwind CSS v4 with CSS variables. Th
 
 Component `<style>` blocks that use `@apply` must start with `@reference "@styles/base.css";`, declare `@layer theme, base, components, utilities;`, and wrap their rules in `@layer components { ... }`. Tailwind resolves `@styles/...` through the explicit `resolve.alias` in `astro.config.ts` (it does not see Vite 8's tsconfig paths), so keep that alias when touching the config. Without the layer, unlayered component CSS overrides Tailwind utility classes (v4 utilities live in cascade layers); without the order statement, a component stylesheet loaded first would put `components` below `base`/preflight.
 
+The JetBrains Mono font is self-hosted via `@fontsource-variable/jetbrains-mono` (imported in `Layout.astro`). Don't load anything from third-party hosts (fonts, scripts, embeds): the privacy policy (`src/pages/datenschutz.astro`) states that none are used, and `tests/legal.spec.ts` fails on any third-party request. Update both if that ever changes.
+
 Note: v4 `space-x-*`/`space-y-*` use zero-specificity `:where()` selectors, so inside `.prose` the typography margins win; use the `!` suffix or explicit margins there.
 
 ### Build Process

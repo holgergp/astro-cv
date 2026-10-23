@@ -1,5 +1,7 @@
 ---
 import { LOCALE, SITE } from "@config";
+import "@fontsource-variable/jetbrains-mono/wght.css";
+import "@fontsource-variable/jetbrains-mono/wght-italic.css";
 import "@styles/base.css";
 import { ClientRouter } from "astro:transitions";
 
@@ -82,14 +84,6 @@ const socialImageURL = new URL(ogImage, Astro.url.origin).href;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
 
     <meta name="theme-color" content="" />
 

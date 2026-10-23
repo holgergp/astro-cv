@@ -23,6 +23,10 @@ const { noMarginTop = false } = Astro.props;
       <span>All rights reserved.</span>
     </div>
   </div>
+  <nav aria-label="Legal" class="legal-links">
+    <a href="/impressum/">Imprint/Impressum</a>
+    <a href="/datenschutz/">Privacy/Datenschutz</a>
+  </nav>
   <div class="pb-6 sm:pb-4">
     Made with ❤️ and <LinkButton href="https://astro.build">Astro</LinkButton>.
     Find it <LinkButton href="https://github.com/holgergp/astro-cv"
@@ -55,6 +59,12 @@ const { noMarginTop = false } = Astro.props;
     }
     .separator {
       @apply hidden sm:inline;
+    }
+    .legal-links {
+      @apply mb-2 flex flex-wrap justify-center gap-x-4 sm:justify-start;
+    }
+    .legal-links a {
+      @apply underline decoration-dashed underline-offset-4 hover:text-skin-accent;
     }
   }
 </style>
