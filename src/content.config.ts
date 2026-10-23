@@ -1,8 +1,10 @@
 import { SITE } from "@config";
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const frontpage = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/frontpage" }),
   schema: () =>
     z.object({
       name: z.string().default(SITE.author),
@@ -19,16 +21,16 @@ const frontpage = defineCollection({
 });
 
 const careerItemSchema = z.object({
-  from: z.string().datetime(),
-  to: z.string().datetime().optional(),
+  from: z.iso.datetime(),
+  to: z.iso.datetime().optional(),
   company: z.string(),
   role: z.string(),
   description: z.string(),
-  link: z.string().url().optional(),
+  link: z.url().optional(),
   logoUrl: z.string().optional(),
 });
 const career = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/career" }),
   schema: () => z.array(careerItemSchema),
 });
 
@@ -38,36 +40,36 @@ const buzzwordsSchema = z.object({
 });
 
 const buzzwords = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/buzzwords" }),
   schema: () => z.array(buzzwordsSchema),
 });
 
 const publicationSchema = z.object({
-  date: z.string().datetime().optional(),
+  date: z.iso.datetime().optional(),
   source: z.string().optional(),
   coauthor: z.string().optional(),
   title: z.string(),
-  link: z.string().url().optional(),
+  link: z.url().optional(),
   featured: z.boolean().optional(),
 });
 const publications = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/publications" }),
   schema: () => z.array(publicationSchema),
 });
 
 const certificationSchema = z.object({
-  date: z.string().datetime().optional(),
+  date: z.iso.datetime().optional(),
   source: z.string().optional(),
   title: z.string(),
 });
 const certifications = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/certifications" }),
   schema: () => z.array(certificationSchema),
 });
 
 const projectSchema = z.object({
-  from: z.string().datetime(),
-  to: z.string().datetime().optional(),
+  from: z.iso.datetime(),
+  to: z.iso.datetime().optional(),
   forCompany: z.string().optional(),
   branch: z.string(),
   description: z.string(),
@@ -75,7 +77,7 @@ const projectSchema = z.object({
   buzzwords: z.array(z.string()),
 });
 const projects = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "*.json", base: "./src/content/projects" }),
   schema: () => z.array(projectSchema),
 });
 
