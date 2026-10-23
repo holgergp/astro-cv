@@ -10,6 +10,10 @@ updates:
     open-pull-requests-limit: 10
     # Bump the version in package.json as is, so exact pins stay exact
     versioning-strategy: increase
+    ignore:
+      # 0.8.x corrupts .astro files, see CLAUDE.md; remove once verified
+      - dependency-name: "prettier-plugin-tailwindcss"
+        versions: [">=0.8.0"]
     # Minor and patch updates come as one weekly PR per dependency type;
     # major updates still get individual PRs
     groups:
