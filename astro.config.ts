@@ -1,14 +1,13 @@
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [react(), sitemap()],
+  integrations: [sitemap()],
   markdown: {
     shikiConfig: {
       theme: "one-dark-pro",
@@ -23,9 +22,6 @@ export default defineConfig({
       alias: {
         "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
       },
-    },
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
     },
   },
   scopedStyleStrategy: "where",
