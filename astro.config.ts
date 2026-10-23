@@ -1,8 +1,7 @@
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
-import remarkToc from "remark-toc";
-import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
@@ -11,15 +10,6 @@ export default defineConfig({
   site: SITE.website,
   integrations: [react(), sitemap()],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
-    ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
@@ -27,9 +17,19 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      // Tailwind resolves `@reference "@styles/base.css"` with Vite's resolver,
+      // which ignores tsconfig paths since Astro 7 (Vite 8 `tsconfigPaths`)
+      alias: {
+        "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
+      },
+    },
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
   },
   scopedStyleStrategy: "where",
+  // Astro 7 defaults to "jsx", which drops whitespace between inline elements
+  // (e.g. "Home » Career" in the breadcrumbs); keep the previous behavior
+  compressHTML: true,
 });

@@ -63,14 +63,14 @@ Three main layouts in `src/layouts/`:
 ### Configuration
 
 - **Site config**: `src/config.ts` - Site metadata, author info, social links
-- **Astro config**: `astro.config.ts` - Integrations (Tailwind, React, Sitemap), markdown plugins (remark-toc, remark-collapse)
+- **Astro config**: `astro.config.ts` - Integrations (React, Sitemap), Tailwind Vite plugin, `@styles` alias, `compressHTML: true` (Astro 7's `"jsx"` default drops whitespace between inline elements, e.g. in the breadcrumbs)
 - **Tailwind config**: Tailwind CSS v4 via `@tailwindcss/vite`, configured CSS-first in `src/styles/base.css` (`@theme` block with CSS variable-based "skin" tokens)
 
 ### Styling Approach
 
 The site uses a custom theming system via Tailwind CSS v4 with CSS variables. The light/dark RGB triplets live in `:root`/`html[data-theme]`, and the `@theme` block in `src/styles/base.css` maps them to per-utility tokens (`--text-color-skin-*`, `--background-color-skin-*`, ...), applied via classes like `text-skin-base`, `bg-skin-fill`, `bg-skin-inverted/50`. This enables easy theme switching while maintaining a single color definition source.
 
-Component `<style>` blocks that use `@apply` must start with `@reference "@styles/base.css";`, declare `@layer theme, base, components, utilities;`, and wrap their rules in `@layer components { ... }`. Without the layer, unlayered component CSS overrides Tailwind utility classes (v4 utilities live in cascade layers); without the order statement, a component stylesheet loaded first would put `components` below `base`/preflight.
+Component `<style>` blocks that use `@apply` must start with `@reference "@styles/base.css";`, declare `@layer theme, base, components, utilities;`, and wrap their rules in `@layer components { ... }`. Tailwind resolves `@styles/...` through the explicit `resolve.alias` in `astro.config.ts` (it does not see Vite 8's tsconfig paths), so keep that alias when touching the config. Without the layer, unlayered component CSS overrides Tailwind utility classes (v4 utilities live in cascade layers); without the order statement, a component stylesheet loaded first would put `components` below `base`/preflight.
 
 Note: v4 `space-x-*`/`space-y-*` use zero-specificity `:where()` selectors, so inside `.prose` the typography margins win; use the `!` suffix or explicit margins there.
 
@@ -87,7 +87,7 @@ E2E tests use Playwright with a single chromium browser configuration. Tests are
 
 ## Key Dependencies
 
-- **Astro 5.x** - Core framework
+- **Astro 7.x** - Core framework (needs Node >= 22.23.4)
 - **Tailwind CSS** - Styling with custom theme system
 - **React** - For interactive components (via @astrojs/react)
 - **Satori + sharp** - Dynamic OG image generation
