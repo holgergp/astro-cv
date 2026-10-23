@@ -11,7 +11,8 @@ This is a personal CV website built with Astro, based on the AstroPaper template
 ```bash
 # Development
 npm run dev              # Start dev server at localhost:4321
-npm run build            # Build production site (runs astro check, astro build, and jampack)
+npm run build            # Build production site (runs typecheck, astro build, and jampack)
+npm run typecheck        # astro check + tsc --noEmit
 npm run preview          # Preview production build locally
 
 # Code Quality
@@ -77,7 +78,7 @@ Note: v4 `space-x-*`/`space-y-*` use zero-specificity `:where()` selectors, so i
 ### Build Process
 
 The build command (`npm run build`) runs three steps:
-1. `astro check` - TypeScript and Astro validation
+1. `npm run typecheck` - `astro check` (Astro + TypeScript validation) and `tsc --noEmit` (also reports `tsconfig.json` errors such as deprecated options, which `astro check` does not)
 2. `astro build` - Build to `./dist/`
 3. `jampack ./dist` - Optimize the built site (images, HTML, etc.)
 
