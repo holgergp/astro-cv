@@ -1,5 +1,7 @@
 ---
+import { Picture } from "astro:assets";
 import { getEntry } from "astro:content";
+import photo from "../assets/holger.jpeg";
 import Address from "./Address.astro";
 import Pill from "./Pill.astro";
 
@@ -31,14 +33,17 @@ const frontpageData = await getEntry("frontpage", "frontpage");
     <span
       class="bg-muted flex size-full items-center justify-center rounded-xl border border-gray-200"
     >
-      <picture class="text-center text-4xl">
-        <source srcset={"/assets/holger.jpeg"} type="image/svg+xml" />
-        <img
-          src={"/assets/holger.jpeg"}
-          alt={`Photo of me}`}
-          class="h-full w-full"
-        />
-      </picture>
+      <Picture
+        src={photo}
+        alt="Photo of me"
+        formats={["avif", "webp"]}
+        width={432}
+        widths={[144, 288, 432]}
+        priority
+        sizes="144px"
+        class="h-full w-full"
+        pictureAttributes={{ class: "text-center text-4xl" }}
+      />
     </span>
   </span>
 </div>
