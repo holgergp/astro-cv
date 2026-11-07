@@ -3,9 +3,10 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Only one breakpoint; add more if one is not enough */
+  /* lg is where the header nav fits into one row */
   --breakpoint-*: initial;
   --breakpoint-sm: 640px;
+  --breakpoint-lg: 1024px;
 
   --font-mono: "JetBrains Mono Variable", monospace;
 
